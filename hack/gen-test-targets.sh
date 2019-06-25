@@ -5,7 +5,7 @@
 # gen-test-target to generate each golang unit test.
 # The script is based on kusttestharness_test.go from kubernetes-sigs/pkg/kusttest/kusttestharness.go
 #
-if [[ $(basename $PWD) != "manifests" ]]; then
+if [[ $(basename $PWD) != "manifests" && ! -d .git ]]; then
   echo "must be at manifests root directory to run $0"
   exit 1
 fi
